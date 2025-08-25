@@ -11,16 +11,24 @@
       href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=DM+Serif+Display&family=Karla&display=swap"
       rel="stylesheet"
     />
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTTXN1+R7eJle1k2hz0C2opkTUMpH5FQZ4PdtGdlIQK5vPQn5Z0jlfDXe4x0C49q6VZp6xg9yg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- Site Styles -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Navigation Bar -->
+    <!-- Sticky Navigation Bar -->
     <header class="navbar">
       <div class="logo">Kevin Jordan's Touch</div>
       <nav>
         <ul class="nav-links">
-          <li><a href="#hero">Home</a></li>
+          <li><a href="#hero" class="active">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
@@ -37,24 +45,32 @@
 
     <!-- About Me Section -->
     <section id="about" class="about">
-      <h2>About Me</h2>
-      <p>
-        I'm Kevin Jordan, a multimedia creative dedicated to crafting engaging
-        visuals and stories that connect.
-      </p>
+      <div class="section-title"><h2>About Me</h2></div>
+      <div class="about-content">
+        <img src="https://via.placeholder.com/500" alt="Kevin Jordan placeholder" />
+        <div class="about-text">
+          <p>
+            I'm Kevin Jordan, a multimedia creative dedicated to crafting
+            engaging visuals and stories that connect.
+          </p>
+        </div>
+      </div>
     </section>
 
     <!-- Services Section -->
     <section id="services" class="services">
-      <h2>Services</h2>
-      <div class="service-list">
-        <div class="service-item">
+      <div class="section-title"><h2>Services</h2></div>
+      <div class="card-grid">
+        <div class="card">
+          <i class="fas fa-video"></i>
           <h3>Video Editing</h3>
         </div>
-        <div class="service-item">
+        <div class="card">
+          <i class="fas fa-share-alt"></i>
           <h3>Social Media Management</h3>
         </div>
-        <div class="service-item">
+        <div class="card">
+          <i class="fas fa-camera"></i>
           <h3>Photography</h3>
         </div>
       </div>
@@ -62,15 +78,26 @@
 
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio">
-      <h2>Portfolio</h2>
-      <div class="portfolio-grid">
-        <!-- Work samples will go here -->
+      <div class="section-title"><h2>Portfolio</h2></div>
+      <div class="card-grid">
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200" alt="Project placeholder" />
+          <h3>Project One</h3>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200" alt="Project placeholder" />
+          <h3>Project Two</h3>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200" alt="Project placeholder" />
+          <h3>Project Three</h3>
+        </div>
       </div>
     </section>
 
     <!-- Newsletter Signup Section -->
     <section id="newsletter" class="newsletter">
-      <h2>Stay in the Loop</h2>
+      <div class="section-title"><h2>Stay in the Loop</h2></div>
       <form action="#">
         <input type="email" placeholder="Enter your email" required />
         <button type="submit">Subscribe</button>
@@ -79,7 +106,7 @@
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
-      <h2>Contact Me</h2>
+      <div class="section-title"><h2>Contact Me</h2></div>
       <form action="#">
         <input type="text" placeholder="Name" required />
         <input type="email" placeholder="Email" required />
@@ -98,6 +125,7 @@
       </div>
     </footer>
 
+    <!-- Site Scripts -->
     <script src="script.js"></script>
   </body>
 </html>

@@ -1,8 +1,10 @@
-// Highlight navigation links on scroll
+// Highlight navigation links on scroll and reveal sections
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('.nav-links a');
+const hiddenElements = document.querySelectorAll('.hidden');
 
-const observer = new IntersectionObserver(
+// Observer for navigation link highlighting
+const navObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -16,4 +18,19 @@ const observer = new IntersectionObserver(
   { threshold: 0.6 }
 );
 
-sections.forEach((section) => observer.observe(section));
+sections.forEach((section) => navObserver.observe(section));
+
+// Observer for entrance animations
+const revealObserver = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.2 }
+);
+
+hiddenElements.forEach((el) => revealObserver.observe(el));
